@@ -1,0 +1,13 @@
+pretrained=None,  # pretrained path
+backbone=dict(
+    type='ResNetSt',
+    depth=101,  # 101, 200, 239
+    norm_eval=True,
+    frozen_stages=1),
+neck=dict(
+    type='FPN',
+    in_channels=[256, 512, 1024, 2048],
+    out_channels=256,
+    start_level=1,
+    add_extra_convs='on_output',
+    num_outs=5),

@@ -1,6 +1,6 @@
 pretrained=None,  # pretrained path
 backbone=dict(
-    type='ResNetSt',
+    type='ResNeSt',
     depth=101,  # 101, 200, 239
     norm_eval=True,
     frozen_stages=1),

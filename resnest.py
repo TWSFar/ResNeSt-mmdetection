@@ -237,7 +237,7 @@ class Bottleneck(nn.Module):
 
 
 @BACKBONES.register_module()
-class ResNetSt(nn.Module):
+class ResNeSt(nn.Module):
     """ResNet Variants
     Parameters
     ----------
@@ -297,7 +297,7 @@ class ResNetSt(nn.Module):
         self.norm_eval = norm_eval
         self.frozen_stages = frozen_stages
 
-        super(ResNetSt, self).__init__()
+        super(ResNeSt, self).__init__()
         self.rectified_conv = rectified_conv
         self.rectify_avg = rectify_avg
         if rectified_conv:
@@ -444,7 +444,7 @@ class ResNetSt(nn.Module):
         return tuple(outs)
 
     def train(self, mode=True):
-        super(ResNetSt, self).train(mode)
+        super(ResNeSt, self).train(mode)
         self._freeze_stages()
         if mode and self.norm_eval:
             for m in self.modules():

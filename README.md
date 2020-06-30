@@ -2,7 +2,7 @@
 ## build
 
   ``` 
-  1. mkdir mmdetection/mmdet/models/backbones/resnest.py
+  1. touch mmdetection/mmdet/models/backbones/resnest.py
   2. # /home/twsf/work/CRGNet/mmdetection/mmdet/models/backbones/__init__.py
     from .resnest import ResNeSt 
     __all__ = [...., 'ResNeSt']
